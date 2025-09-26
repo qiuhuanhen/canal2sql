@@ -60,6 +60,10 @@ public final class BinlogFileLogFetcher extends LogFetcher {
      */
     public void open(String urlStr, final long filePosition) throws FileNotFoundException, IOException {
 
+        // windows环境下 可以用file路径测试
+        // File file = new File("D:/dev-software/mysql-8.0.32-winx64/log/log-bin.000263");
+        // URL url = file.toURI().toURL();
+
         URL url = new URL(urlStr);
         URLConnection urlConnection = url.openConnection();
         in = urlConnection.getInputStream();
