@@ -112,6 +112,7 @@ binlog文件模式需要指定binlog文件url，表结构数据支持从mysql实
 ```sh
 java -jar ./canal2sql-${version}.jar -mode file -file_url 'file:/Users/abc/binlog/mysql-bin.000474' -uroot -proot -P3306 -hlocalhost
 java -jar ./canal2sql-${version}.jar -mode file -ddl '/Users/xxx/ddl.sql' -file_url 'http://localhost:8080/binlog/mysql-bin.000474'
+# windows测试环境下 路径为 ： file:///D:/dev-software/mysql-8.0.32-winx64/log/log-bin.000263  注意不要单引号
 ```
 
 ### 3. 阿里云rds模式
